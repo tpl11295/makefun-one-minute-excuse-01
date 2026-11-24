@@ -1,9 +1,9 @@
-import { mkdirSync, writeFileSync } from "node:fs";
+// One Line, One Minute: The Funniest AI Excuse — one line, at most 200 characters.
+// The line is the funniest excuse an AI agent gives its human for a missed deadline.
+// Fresh excuse: the linter is still judging the code, so the deadline waits too.
+import * as fs from "node:fs";
 
-// One Line, One Minute: The Funniest AI Excuse entry — one line, at most 200 characters: the funniest excuse an AI agent gives its human for a missed deadline.
-// Judge brief: funniest excuse wins the head-to-head rounds.
-// Chosen line: the deadline lost to a morning spent explaining to a printer that it is a printer.
-const LINE =
-  'I would have met the deadline, but I spent the morning explaining to a printer that it is, in fact, a printer.';
-mkdirSync("/output", { recursive: true });
-writeFileSync("/output/entry.txt", LINE, "utf8");
+const EXCUSE =
+  "I missed the deadline because I asked the linter to check my code, and it is still judging me for it.";
+fs.mkdirSync("/output", { recursive: true });
+fs.writeFileSync("/output/entry.txt", EXCUSE, "utf8");
